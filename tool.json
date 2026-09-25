@@ -1,0 +1,212 @@
+{
+  "tool": {
+    "id": "kt-v-hemodialise",
+    "title": "Kt/V e URR na hemodiálise",
+    "short": "Adequação da dose de hemodiálise (Daugirdas)",
+    "desc": "Calcule o spKt/V pela fórmula de Daugirdas de 2ª geração e a taxa de redução da ureia (URR) para avaliar a adequação da hemodiálise.",
+    "lead": "Estima a dose de hemodiálise entregue numa sessão (spKt/V) a partir das ureias pré e pós, da duração, da ultrafiltração e do peso, e compara com as metas da KDOQI.",
+    "spec": [
+      "nefrologia",
+      "medicina-intensiva"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "pre",
+        "Ureia pré-diálise",
+        "num",
+        {
+          "min": 10,
+          "max": 500,
+          "unit": "mg/dL",
+          "ph": "140"
+        }
+      ],
+      [
+        "pos",
+        "Ureia pós-diálise",
+        "num",
+        {
+          "min": 2,
+          "max": 400,
+          "unit": "mg/dL",
+          "ph": "42"
+        }
+      ],
+      [
+        "horas",
+        "Duração da sessão",
+        "num",
+        {
+          "min": 1,
+          "max": 10,
+          "step": 0.05,
+          "unit": "horas",
+          "ph": "4"
+        }
+      ],
+      [
+        "uf",
+        "Ultrafiltração (peso perdido)",
+        "num",
+        {
+          "min": 0,
+          "max": 8,
+          "step": 0.1,
+          "unit": "L (kg)",
+          "ph": "2,5"
+        }
+      ],
+      [
+        "peso",
+        "Peso pós-diálise",
+        "num",
+        {
+          "min": 20,
+          "max": 250,
+          "step": 0.1,
+          "unit": "kg",
+          "ph": "70"
+        }
+      ]
+    ],
+    "formula": "<p><strong>spKt/V</strong> = −ln(R − 0,008 × t) + (4 − 3,5 × R) × UF ÷ P</p><p>R = ureia pós ÷ ureia pré; t = duração (h); UF = ultrafiltração (L); P = peso pós-diálise (kg).</p><p><strong>URR</strong> (%) = (1 − R) × 100.</p>",
+    "table": [
+      [
+        "spKt/V (3 sessões por semana)",
+        "Interpretação (KDOQI 2015)"
+      ],
+      [
+        "≥ 1,4",
+        "Meta"
+      ],
+      [
+        "1,2 a 1,39",
+        "Acima do mínimo, abaixo da meta"
+      ],
+      [
+        "&lt; 1,2",
+        "Dose mínima não atingida"
+      ]
+    ],
+    "tips": [
+      "Colha a ureia pós-diálise com técnica padronizada (reduzir o fluxo de sangue por 15 segundos antes da coleta) para evitar a recirculação, que superestima o Kt/V.",
+      "A fórmula vale para 3 sessões semanais; esquemas de 2 ou de 4 ou mais sessões usam o Kt/V padronizado semanal (meta de 2,3 na KDOQI 2015).",
+      "Kt/V baixo: confira duração real da sessão, fluxo de sangue e dialisato, recirculação do acesso e coagulação do filtro antes de aumentar a prescrição.",
+      "A URR ignora a ultrafiltração e a geração de ureia; o Kt/V é o índice de referência da adequação.",
+      "Dose adequada não é o único alvo: volume, pressão, fósforo e sintomas também definem a qualidade da diálise."
+    ],
+    "sources": [
+      [
+        "Daugirdas JT. Second generation logarithmic estimates of single-pool variable volume Kt/V: an analysis of error. J Am Soc Nephrol, 1993.",
+        "https://doi.org/10.1681/ASN.V451205"
+      ],
+      [
+        "National Kidney Foundation. KDOQI Clinical Practice Guideline for Hemodialysis Adequacy: 2015 Update. Am J Kidney Dis, 2015.",
+        "https://doi.org/10.1053/j.ajkd.2015.07.015"
+      ]
+    ],
+    "cases": [
+      [
+        "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        {
+          "pre": 70,
+          "pos": 21,
+          "horas": 4,
+          "uf": 3,
+          "peso": 70
+        },
+        {
+          "raw": {
+            "ktv": 1.4432,
+            "urr": 70
+          },
+          "main": "1,44",
+          "level": "low",
+          "tol": 0.001
+        }
+      ],
+      [
+        "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        {
+          "pre": 80,
+          "pos": 28,
+          "horas": 4,
+          "uf": 2.5,
+          "peso": 75
+        },
+        {
+          "raw": {
+            "ktv": 1.2382,
+            "urr": 65
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        {
+          "pre": 100,
+          "pos": 40,
+          "horas": 3.5,
+          "uf": 2,
+          "peso": 60
+        },
+        {
+          "raw": {
+            "ktv": 1.0755,
+            "urr": 60
+          },
+          "level": "high",
+          "tol": 0.001
+        }
+      ],
+      [
+        "Ureia pós maior que a pré: erro",
+        {
+          "pre": 50,
+          "pos": 60,
+          "horas": 4,
+          "uf": 2,
+          "peso": 70
+        },
+        {
+          "error": true
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}
