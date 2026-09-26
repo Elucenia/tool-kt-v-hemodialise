@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-kt-v-hemodialise",
   "version": "0.1.0",
-  "description": "Kt/V e URR na hemodiálise · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Kt/V e URR na hemodiálise · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",

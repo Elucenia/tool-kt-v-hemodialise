@@ -1,11 +1,11 @@
-/* tool-kt-v-hemodialise · Elucenia · https://github.com/Elucenia/tool-kt-v-hemodialise
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-kt-v-hemodialise · ELUCENIA · https://github.com/Elucenia/tool-kt-v-hemodialise
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"kt-v-hemodialise","title":"Kt/V e URR na hemodiálise","fields":[["pre","Ureia pré-diálise","num",{"min":10,"max":500,"unit":"mg/dL","ph":"140"}],["pos","Ureia pós-diálise","num",{"min":2,"max":400,"unit":"mg/dL","ph":"42"}],["horas","Duração da sessão","num",{"min":1,"max":10,"step":0.05,"unit":"horas","ph":"4"}],["uf","Ultrafiltração (peso perdido)","num",{"min":0,"max":8,"step":0.1,"unit":"L (kg)","ph":"2,5"}],["peso","Peso pós-diálise","num",{"min":20,"max":250,"step":0.1,"unit":"kg","ph":"70"}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
