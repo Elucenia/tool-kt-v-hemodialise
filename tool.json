@@ -5,11 +5,11 @@
     "short": "Adequação da dose de hemodiálise (Daugirdas)",
     "desc": "Calcule o spKt/V pela fórmula de Daugirdas de 2ª geração e a taxa de redução da ureia (URR) para avaliar a adequação da hemodiálise.",
     "lead": "Estima a dose de hemodiálise entregue numa sessão (spKt/V) a partir das ureias pré e pós, da duração, da ultrafiltração e do peso, e compara com as metas da KDOQI.",
+    "kind": "Calculadora",
     "spec": [
       "nefrologia",
       "medicina-intensiva"
     ],
-    "tier": 1,
     "fields": [
       [
         "pre",
@@ -71,31 +71,6 @@
       ]
     ],
     "formula": "<p><strong>spKt/V</strong> = −ln(R − 0,008 × t) + (4 − 3,5 × R) × UF ÷ P</p><p>R = ureia pós ÷ ureia pré; t = duração (h); UF = ultrafiltração (L); P = peso pós-diálise (kg).</p><p><strong>URR</strong> (%) = (1 − R) × 100.</p>",
-    "table": [
-      [
-        "spKt/V (3 sessões por semana)",
-        "Interpretação (KDOQI 2015)"
-      ],
-      [
-        "≥ 1,4",
-        "Meta"
-      ],
-      [
-        "1,2 a 1,39",
-        "Acima do mínimo, abaixo da meta"
-      ],
-      [
-        "&lt; 1,2",
-        "Dose mínima não atingida"
-      ]
-    ],
-    "tips": [
-      "Colha a ureia pós-diálise com técnica padronizada (reduzir o fluxo de sangue por 15 segundos antes da coleta) para evitar a recirculação, que superestima o Kt/V.",
-      "A fórmula vale para 3 sessões semanais; esquemas de 2 ou de 4 ou mais sessões usam o Kt/V padronizado semanal (meta de 2,3 na KDOQI 2015).",
-      "Kt/V baixo: confira duração real da sessão, fluxo de sangue e dialisato, recirculação do acesso e coagulação do filtro antes de aumentar a prescrição.",
-      "A URR ignora a ultrafiltração e a geração de ureia; o Kt/V é o índice de referência da adequação.",
-      "Dose adequada não é o único alvo: volume, pressão, fósforo e sintomas também definem a qualidade da diálise."
-    ],
     "sources": [
       [
         "Daugirdas JT. Second generation logarithmic estimates of single-pool variable volume Kt/V: an analysis of error. J Am Soc Nephrol, 1993.",
@@ -176,9 +151,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -187,17 +159,511 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T16:44:15.326Z",
+      "total": 88,
+      "passed": 88,
+      "sourceRowCount": 88,
+      "uniqueApiInputCount": 88,
+      "sourceContextCount": 88,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "19aad67713bf6c08a2007ade3ee96a1ee021c9df6fc5bf9df9a09d2668c1d602",
+        "total": 88,
+        "bankRowCount": 88,
+        "uniqueApiInputCount": 88,
+        "sourceContextCount": 88,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/seven-limited-source-independent-expectations-final26.json",
+            "sha256": "4b960d8c215321b3f059726a3b7bc6b35f0fe4d63a7ee845fbc6edb535a4f0cc"
+          },
+          {
+            "file": "reports/review-20261003/three-limited-source-expectations-final23.json",
+            "sha256": "77dd54945e893d2ec34288cfcccaad3bd6208515cd255912b98c0e2de48a30e3"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+          "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+        },
+        "packagingRequirement": "Copy this V2 strictly scoped complete bank only into fresh frozen26 packages after independent peer; V1 and prior25 archives remain unchanged."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "audit": {
+          "file": "reports/review-20261003/seven-limited-source-input-identity-final26.json",
+          "sha256": "e184ba55d7cd2c90120c495d3143d067bd5d72ae98b914f22a75fb943e510d94"
+        },
+        "sourceRows": 88,
+        "uniqueApiInputs": 88,
+        "duplicateRows": 0
+      },
+      "scope": "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+      "sources": [
+        {
+          "id": "kt-v-hemodialise",
+          "edition": "Daugirdas1993, JASN4(5):1205–1213, PMID8305648, DOI10.1681/ASN.V451205",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8305648/",
+          "access": "Direct PubMed open returned only HHS footer; exact original PubMed abstract was fully available in indexed primary search result and read. DOI direct open failed. Original full paper not retrieved/read.",
+          "readScope": "Original indexed abstract: second-generation equation; simulated range0.6–2.6 and500 modeling sessions0.7–2.1. No treatment adequacy or KDOQI decision thresholds verified.",
+          "formula": "spKt/V = -ln(R - 0.008*t) + (4 - 3.5*R)*UF/W",
+          "unitsScope": "Current local contract uses t in hours, UF in L(kg), W postdialysis kg and same units for pre/post urea. These unit/sampling definitions are not independently established by the abstract accessed; no full conformance claim.",
+          "notReviewed": [
+            "Original full-paper sampling method and time units",
+            "KDOQI2015 threshold applicability",
+            "Equilibrated/weekly dialysis dose",
+            "Patient-level appropriateness"
+          ]
+        }
+      ],
+      "evidencePath": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+      "evidenceSha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80",
+      "originalEvidence": {
+        "file": "reports/review-20261003/three-limited-source-oracles-final23.json",
+        "sha256": "b5a0c3a3822f0195aff892cd543332097c5b8a7ecd108774719038a91d98392f"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred.",
+        "recordedAt": "2026-10-04T18:58:11.733Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred."
+        },
+        "peer": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-independent-peer-final26-v2-r2.json",
+          "sha256": "28a96906dcfa0ce5272da34613c4ca61686204552a235ebc4adbb65e4ff6868c",
+          "summary": {
+            "checks": 18879,
+            "failed": 0,
+            "methods": 7,
+            "sourceRows": 2902,
+            "uniqueInputs": 2902,
+            "freshExecutions": 8706,
+            "helperAssertions": 25953,
+            "metadataMethods": 120,
+            "metadataRows": 52620,
+            "metadataUnique": 52548,
+            "metadataRepeats": 72
+          },
+          "scope": "Root independent peer of exact41 preimages/afterimages; independently frozen2902 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all11 previous scopes;21 fresh Node helper executions replay all7 limited numeric components without clinical approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-application-final26.json",
+          "sha256": "3b1cd7d57c7062aa640504095c1a7eca5b051af7c0c0c8d4d5b1965a869080da"
+        },
+        "reviewedBankScope": "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+        "currentBinding": {
+          "source26BankSha256": "0fe9b2dd17142081dde34bd631fe127e4e6487102cf01fbe108cf63d941da406",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+              "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/kt-v-hemodialise/calculator.js",
+              "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/kt-v-hemodialise/calculator.js",
+              "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 264,
+      "actualVmExecutions": 264,
+      "implementations": [
+        {
+          "id": "kt-v-hemodialise",
+          "app": "website",
+          "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+          "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+        },
+        {
+          "id": "kt-v-hemodialise",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/kt-v-hemodialise/calculator.js",
+          "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+        },
+        {
+          "id": "kt-v-hemodialise",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/kt-v-hemodialise/calculator.js",
+          "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+        }
+      ],
+      "qualifications": [
+        "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+        "Original sourceExpected data retained alongside own expected raw-component projections; clinical codes/thresholds and survival fields deliberately excluded from the package replay.",
+        "All862 original historical fixtures/expected values/tolerances and approval flags preserved. Four inline metadata rows are only a declared subset of this complete downloadable bank."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicOutputProjection": {
+        "status": "only-verified-raw-numeric-components",
+        "recordedAt": "2026-10-04T16:49:59.771Z",
+        "sourceEvidence": {
+          "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+          "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+        },
+        "originalBank": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-stage-final26/apps/website/private/tool-code/kt-v-hemodialise/independent-source-cases.json",
+          "sha256": "113d0b822f5127a1aa92b89a4bfb9feee707955af75c1a51738fbb08cc9c29a6"
+        },
+        "originalReportsPreserved": true,
+        "excluded": [
+          "Unexposed MASCC risk flag and USC/VNPI group expectations",
+          "MACIS survival and other untested returned raw fields",
+          "Karvonen exercise-zone main display and all untested main display values",
+          "Original API error prose; only rejection presence is tested"
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Daugirdas 2ªgeração 1993:sp Kt/V variável; UF/peso pós; URR; sem Kt/Vequilibrado",
+    "implementationVersion": "kt-v-hemodialise@native-2026-10-03+3cd11ab6588d",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/8305648/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "spKt/V = −ln(R − 0,008 × t) + (4 − 3,5 × R) × UF ÷ P R = ureia pós ÷ ureia pré; t = duração (h); UF = ultrafiltração (L); P = peso pós-diálise (kg). URR (%) = (1 − R) × 100.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "pre",
+            "label": "Ureia pré-diálise",
+            "type": "num",
+            "min": 10,
+            "max": 500,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pos",
+            "label": "Ureia pós-diálise",
+            "type": "num",
+            "min": 2,
+            "max": 400,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "horas",
+            "label": "Duração da sessão",
+            "type": "num",
+            "min": 1,
+            "max": 10,
+            "unit": "horas",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "uf",
+            "label": "Ultrafiltração (peso perdido)",
+            "type": "num",
+            "min": 0,
+            "max": 8,
+            "unit": "L (kg)",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "peso",
+            "label": "Peso pós-diálise",
+            "type": "num",
+            "min": 20,
+            "max": 250,
+            "unit": "kg",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "bc4c00869319d6d85f380fa41b9a170f389a51f158fdc17fa18fa406074f0c6c"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Daugirdas JT. Second generation logarithmic estimates of single-pool variable volume Kt/V: an analysis of error. J Am Soc Nephrol, 1993.",
+          "url": "https://doi.org/10.1681/ASN.V451205",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Second generation logarithmic estimates of single-pool variable volume Kt/V: an analysis of error.",
+            "year": "1993",
+            "firstPublicationDate": "1993-11-01",
+            "doi": "10.1681/asn.v451205",
+            "pmid": "8305648",
+            "journal": "Journal of the American Society of Nephrology : JASN",
+            "authors": "Daugirdas JT."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/8305648/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "ad03f178a910f4d14f6b5add301d54383a4ba5cf2b18f2ad8f894decfc47b2bb",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "National Kidney Foundation. KDOQI Clinical Practice Guideline for Hemodialysis Adequacy: 2015 Update. Am J Kidney Dis, 2015.",
+          "url": "https://doi.org/10.1053/j.ajkd.2015.07.015",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "KDOQI Clinical Practice Guideline for Hemodialysis Adequacy: 2015 update.",
+            "year": "2015",
+            "firstPublicationDate": "2015-11-01",
+            "doi": "10.1053/j.ajkd.2015.07.015",
+            "pmid": "26498416",
+            "journal": "American journal of kidney diseases : the official journal of the National Kidney Foundation",
+            "authors": "National Kidney Foundation."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/26498416/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "8e74872ae9370055d7787c0e489aa65fadc93b549996a108cdc2efac64cdf043",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T16:44:15.326Z",
+        "total": 88,
+        "passed": 88,
+        "sourceRowCount": 88,
+        "uniqueApiInputCount": 88,
+        "sourceContextCount": 88,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "19aad67713bf6c08a2007ade3ee96a1ee021c9df6fc5bf9df9a09d2668c1d602",
+          "total": 88,
+          "bankRowCount": 88,
+          "uniqueApiInputCount": 88,
+          "sourceContextCount": 88,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/seven-limited-source-independent-expectations-final26.json",
+              "sha256": "4b960d8c215321b3f059726a3b7bc6b35f0fe4d63a7ee845fbc6edb535a4f0cc"
+            },
+            {
+              "file": "reports/review-20261003/three-limited-source-expectations-final23.json",
+              "sha256": "77dd54945e893d2ec34288cfcccaad3bd6208515cd255912b98c0e2de48a30e3"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+            "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+          },
+          "packagingRequirement": "Copy this V2 strictly scoped complete bank only into fresh frozen26 packages after independent peer; V1 and prior25 archives remain unchanged."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "audit": {
+            "file": "reports/review-20261003/seven-limited-source-input-identity-final26.json",
+            "sha256": "e184ba55d7cd2c90120c495d3143d067bd5d72ae98b914f22a75fb943e510d94"
+          },
+          "sourceRows": 88,
+          "uniqueApiInputs": 88,
+          "duplicateRows": 0
+        },
+        "scope": "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+        "sources": [
+          {
+            "id": "kt-v-hemodialise",
+            "edition": "Daugirdas1993, JASN4(5):1205–1213, PMID8305648, DOI10.1681/ASN.V451205",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/8305648/",
+            "access": "Direct PubMed open returned only HHS footer; exact original PubMed abstract was fully available in indexed primary search result and read. DOI direct open failed. Original full paper not retrieved/read.",
+            "readScope": "Original indexed abstract: second-generation equation; simulated range0.6–2.6 and500 modeling sessions0.7–2.1. No treatment adequacy or KDOQI decision thresholds verified.",
+            "formula": "spKt/V = -ln(R - 0.008*t) + (4 - 3.5*R)*UF/W",
+            "unitsScope": "Current local contract uses t in hours, UF in L(kg), W postdialysis kg and same units for pre/post urea. These unit/sampling definitions are not independently established by the abstract accessed; no full conformance claim.",
+            "notReviewed": [
+              "Original full-paper sampling method and time units",
+              "KDOQI2015 threshold applicability",
+              "Equilibrated/weekly dialysis dose",
+              "Patient-level appropriateness"
+            ]
+          }
+        ],
+        "evidencePath": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+        "evidenceSha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80",
+        "originalEvidence": {
+          "file": "reports/review-20261003/three-limited-source-oracles-final23.json",
+          "sha256": "b5a0c3a3822f0195aff892cd543332097c5b8a7ecd108774719038a91d98392f"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred.",
+          "recordedAt": "2026-10-04T18:58:11.733Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred."
+          },
+          "peer": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-independent-peer-final26-v2-r2.json",
+            "sha256": "28a96906dcfa0ce5272da34613c4ca61686204552a235ebc4adbb65e4ff6868c",
+            "summary": {
+              "checks": 18879,
+              "failed": 0,
+              "methods": 7,
+              "sourceRows": 2902,
+              "uniqueInputs": 2902,
+              "freshExecutions": 8706,
+              "helperAssertions": 25953,
+              "metadataMethods": 120,
+              "metadataRows": 52620,
+              "metadataUnique": 52548,
+              "metadataRepeats": 72
+            },
+            "scope": "Root independent peer of exact41 preimages/afterimages; independently frozen2902 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all11 previous scopes;21 fresh Node helper executions replay all7 limited numeric components without clinical approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-application-final26.json",
+            "sha256": "3b1cd7d57c7062aa640504095c1a7eca5b051af7c0c0c8d4d5b1965a869080da"
+          },
+          "reviewedBankScope": "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+          "currentBinding": {
+            "source26BankSha256": "0fe9b2dd17142081dde34bd631fe127e4e6487102cf01fbe108cf63d941da406",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+                "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/kt-v-hemodialise/calculator.js",
+                "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/kt-v-hemodialise/calculator.js",
+                "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 264,
+        "actualVmExecutions": 264,
+        "implementations": [
+          {
+            "id": "kt-v-hemodialise",
+            "app": "website",
+            "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+            "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+          },
+          {
+            "id": "kt-v-hemodialise",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/kt-v-hemodialise/calculator.js",
+            "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+          },
+          {
+            "id": "kt-v-hemodialise",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/kt-v-hemodialise/calculator.js",
+            "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+          }
+        ],
+        "qualifications": [
+          "Daugirdas1993 second-generation spKt/V equation from the original abstract; local six-decimal numerical output and elementary URR ratio. Three algebraic/local domain rejections are explicitly separate from clinical eligibility. Abstract does not independently establish sampling/time/UF definitions or KDOQI adequacy thresholds. No weekly/equilibrated-dose, clinical adequacy or full-method approval.",
+          "Original sourceExpected data retained alongside own expected raw-component projections; clinical codes/thresholds and survival fields deliberately excluded from the package replay.",
+          "All862 original historical fixtures/expected values/tolerances and approval flags preserved. Four inline metadata rows are only a declared subset of this complete downloadable bank."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicOutputProjection": {
+          "status": "only-verified-raw-numeric-components",
+          "recordedAt": "2026-10-04T16:49:59.771Z",
+          "sourceEvidence": {
+            "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+            "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+          },
+          "originalBank": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-stage-final26/apps/website/private/tool-code/kt-v-hemodialise/independent-source-cases.json",
+            "sha256": "113d0b822f5127a1aa92b89a4bfb9feee707955af75c1a51738fbb08cc9c29a6"
+          },
+          "originalReportsPreserved": true,
+          "excluded": [
+            "Unexposed MASCC risk flag and USC/VNPI group expectations",
+            "MACIS survival and other untested returned raw fields",
+            "Karvonen exercise-zone main display and all untested main display values",
+            "Original API error prose; only rejection presence is tested"
+          ],
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+    },
+    "limits": "Esta fórmula estima spKt/V de uma sessão, com compartimento único e correção de volume, e não equivale ao Kt/V equilibrado ou semanal. A técnica e o momento das amostras, unidades e regime de diálise precisam corresponder ao método. Metas KDOQI têm contexto e fonte próprios; a análise do valor isolado não confirma adequação global do tratamento.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.070Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Técnica de coleta pós-diálise, unidade t/UF/W e metas KDOQI 2015 não estão no resumo. Não é Kt/V equilibrado ou semanal."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+    "bytes": 5378,
+    "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "6dba086815473205022618a9655beb26d94beede3195650423af77a2805eaa5f",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "24639074c85f4a8b3a405e8d594e12dd0323e629f2a13b4b47f4e8ba0c0a3c46",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "24639074c85f4a8b3a405e8d594e12dd0323e629f2a13b4b47f4e8ba0c0a3c46",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

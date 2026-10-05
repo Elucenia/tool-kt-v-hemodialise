@@ -1,6 +1,16 @@
 [
   {
-    "label": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+    "id": "kt-v-hemodialise",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+    "originalInput": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
     "input": {
       "pre": 70,
       "pos": 21,
@@ -17,17 +27,38 @@
       "level": "low",
       "tol": 0.001
     },
-    "originalInput": {
-      "pre": 70,
-      "pos": 21,
-      "horas": 4,
-      "uf": 3,
-      "peso": 70
+    "recordedResult": {
+      "main": [
+        "1,44",
+        ""
+      ],
+      "label": "spKt/V (Daugirdas 2ª geração)",
+      "raw": {
+        "ktv": 1.443197,
+        "urr": 70
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+    "id": "kt-v-hemodialise",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+    "originalInput": {
+      "pre": 80,
+      "pos": 28,
+      "horas": 4,
+      "uf": 2.5,
+      "peso": 75
+    },
     "input": {
       "pre": 80,
       "pos": 28,
@@ -43,17 +74,38 @@
       "level": "mid",
       "tol": 0.001
     },
-    "originalInput": {
-      "pre": 80,
-      "pos": 28,
-      "horas": 4,
-      "uf": 2.5,
-      "peso": 75
+    "recordedResult": {
+      "main": [
+        "1,24",
+        ""
+      ],
+      "label": "spKt/V (Daugirdas 2ª geração)",
+      "raw": {
+        "ktv": 1.238204,
+        "urr": 65
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+    "id": "kt-v-hemodialise",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+    "originalInput": {
+      "pre": 100,
+      "pos": 40,
+      "horas": 3.5,
+      "uf": 2,
+      "peso": 60
+    },
     "input": {
       "pre": 100,
       "pos": 40,
@@ -69,17 +121,38 @@
       "level": "high",
       "tol": 0.001
     },
-    "originalInput": {
-      "pre": 100,
-      "pos": 40,
-      "horas": 3.5,
-      "uf": 2,
-      "peso": 60
+    "recordedResult": {
+      "main": [
+        "1,08",
+        ""
+      ],
+      "label": "spKt/V (Daugirdas 2ª geração)",
+      "raw": {
+        "ktv": 1.075528,
+        "urr": 60
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Ureia pós maior que a pré: erro",
+    "id": "kt-v-hemodialise",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Ureia pós maior que a pré: erro",
+    "originalInput": {
+      "pre": 50,
+      "pos": 60,
+      "horas": 4,
+      "uf": 2,
+      "peso": 70
+    },
     "input": {
       "pre": 50,
       "pos": 60,
@@ -90,13 +163,16 @@
     "expected": {
       "error": true
     },
-    "originalInput": {
-      "pre": 50,
-      "pos": 60,
-      "horas": 4,
-      "uf": 2,
-      "peso": 70
+    "recordedResult": {
+      "error": "A ureia pós-diálise precisa ser menor que a pré-diálise."
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

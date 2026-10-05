@@ -1,0 +1,360 @@
+{
+  "id": "kt-v-hemodialise",
+  "at": "2026-10-05T17:29:54.326Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
+    "bytes": 5378,
+    "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+  },
+  "cases": [
+    {
+      "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+      "input": {
+        "pre": 70,
+        "pos": 21,
+        "horas": 4,
+        "uf": 3,
+        "peso": 70
+      },
+      "obtained": {
+        "id": "kt-v-hemodialise",
+        "main": [
+          "1,44",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.443197,
+          "urr": 70
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "1,44",
+          "obtained": "1,44",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.ktv",
+          "expected": 1.4432,
+          "obtained": 1.443197,
+          "tolerance": 0.001,
+          "difference": 0.0000029999999999752447,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.urr",
+          "expected": 70,
+          "obtained": 70,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ktv",
+          "expected": 1.443197,
+          "obtained": 1.443197,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.urr",
+          "expected": 70,
+          "obtained": 70,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,44",
+          "obtained": "1,44",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+      "input": {
+        "pre": 80,
+        "pos": 28,
+        "horas": 4,
+        "uf": 2.5,
+        "peso": 75
+      },
+      "obtained": {
+        "id": "kt-v-hemodialise",
+        "main": [
+          "1,24",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.238204,
+          "urr": 65
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.ktv",
+          "expected": 1.2382,
+          "obtained": 1.238204,
+          "tolerance": 0.001,
+          "difference": 0.000004000000000115023,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.urr",
+          "expected": 65,
+          "obtained": 65,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ktv",
+          "expected": 1.238204,
+          "obtained": 1.238204,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.urr",
+          "expected": 65,
+          "obtained": 65,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,24",
+          "obtained": "1,24",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+      "input": {
+        "pre": 100,
+        "pos": 40,
+        "horas": 3.5,
+        "uf": 2,
+        "peso": 60
+      },
+      "obtained": {
+        "id": "kt-v-hemodialise",
+        "main": [
+          "1,08",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.075528,
+          "urr": 60
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.ktv",
+          "expected": 1.0755,
+          "obtained": 1.075528,
+          "tolerance": 0.001,
+          "difference": 0.000028000000000139025,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.urr",
+          "expected": 60,
+          "obtained": 60,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ktv",
+          "expected": 1.075528,
+          "obtained": 1.075528,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.urr",
+          "expected": 60,
+          "obtained": 60,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,08",
+          "obtained": "1,08",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Ureia pós maior que a pré: erro",
+      "input": {
+        "pre": 50,
+        "pos": 60,
+        "horas": 4,
+        "uf": 2,
+        "peso": 70
+      },
+      "obtained": {
+        "error": "A ureia pós-diálise precisa ser menor que a pré-diálise.",
+        "code": "FORMULA_DOMAIN"
+      },
+      "checks": [
+        {
+          "at": "recorded-rejection",
+          "expected": "4xx with error and no result",
+          "obtained": {
+            "status": 422,
+            "error": "A ureia pós-diálise precisa ser menor que a pré-diálise.",
+            "result": false
+          },
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 54,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

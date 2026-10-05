@@ -1,0 +1,783 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pre",
+    "input": {
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pre",
+    "input": {
+      "pre": "",
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pre",
+    "input": {
+      "pre": "NaN",
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pre",
+    "input": {
+      "pre": "Infinity",
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pre",
+    "input": {
+      "pre": "1e309",
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pre",
+    "input": {
+      "pre": "invalid",
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pre",
+    "input": {
+      "pre": {},
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pre",
+    "input": {
+      "pre": true,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pre",
+    "input": {
+      "pre": 9,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pre",
+    "input": {
+      "pre": 550,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pos",
+    "input": {
+      "pre": 70,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pos",
+    "input": {
+      "pre": 70,
+      "pos": "",
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pos",
+    "input": {
+      "pre": 70,
+      "pos": "NaN",
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pos",
+    "input": {
+      "pre": 70,
+      "pos": "Infinity",
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pos",
+    "input": {
+      "pre": 70,
+      "pos": "1e309",
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pos",
+    "input": {
+      "pre": 70,
+      "pos": "invalid",
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pos",
+    "input": {
+      "pre": 70,
+      "pos": {},
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pos",
+    "input": {
+      "pre": 70,
+      "pos": true,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pos",
+    "input": {
+      "pre": 70,
+      "pos": 1,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pos",
+    "input": {
+      "pre": 70,
+      "pos": 440,
+      "horas": 4,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": "",
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": "NaN",
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": "Infinity",
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": "1e309",
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": "invalid",
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": {},
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": true,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 0,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum horas",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 11,
+      "uf": 3,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "horas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": "",
+      "peso": 70
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": "NaN",
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": "Infinity",
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": "1e309",
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": "invalid",
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": {},
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": true,
+      "peso": 70
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": -1,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum uf",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 9,
+      "peso": 70
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "uf"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 18
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum peso",
+    "input": {
+      "pre": 70,
+      "pos": 21,
+      "horas": 4,
+      "uf": 3,
+      "peso": 275
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]
