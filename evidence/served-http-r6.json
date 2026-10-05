@@ -1,0 +1,830 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "kt-v-hemodialise",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/kt-v-hemodialise/calculator.js",
+    "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf",
+    "bytes": 5378
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "kt-v-hemodialise",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+      "originalInput": {
+        "pre": 70,
+        "pos": 21,
+        "horas": 4,
+        "uf": 3,
+        "peso": 70
+      },
+      "input": {
+        "pre": 70,
+        "pos": 21,
+        "horas": 4,
+        "uf": 3,
+        "peso": 70
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "ktv": 1.4432,
+          "urr": 70
+        },
+        "main": "1,44",
+        "level": "low",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "1,44",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.443197,
+          "urr": 70
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pre": 70,
+            "pos": 21,
+            "horas": 4,
+            "uf": 3,
+            "peso": 70
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+          "startedAt": "2026-10-05T17:39:05.045Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "kt-v-hemodialise",
+              "main": [
+                "1,44",
+                ""
+              ],
+              "label": "spKt/V (Daugirdas 2ª geração)",
+              "raw": {
+                "ktv": 1.443197,
+                "urr": 70
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "0555c8d0e2e60e83fe0003b4854fe46e5ea2a7fcb2ed2584ebe281be5cb91f36",
+          "bytes": 167,
+          "elapsedMs": 3.6823999999905936
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "startedAt": "2026-10-05T17:39:05.045Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "kt-v-hemodialise",
+            "main": [
+              "1,44",
+              ""
+            ],
+            "label": "spKt/V (Daugirdas 2ª geração)",
+            "raw": {
+              "ktv": 1.443197,
+              "urr": 70
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "0555c8d0e2e60e83fe0003b4854fe46e5ea2a7fcb2ed2584ebe281be5cb91f36",
+        "bytes": 167,
+        "elapsedMs": 3.6823999999905936
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "1,44",
+            "obtained": "1,44",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.ktv",
+            "expected": 1.4432,
+            "obtained": 1.443197,
+            "tolerance": 0.001,
+            "difference": 0.0000029999999999752447,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.urr",
+            "expected": 70,
+            "obtained": 70,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.ktv",
+            "expected": 1.443197,
+            "obtained": 1.443197,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.urr",
+            "expected": 70,
+            "obtained": 70,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,44",
+            "obtained": "1,44",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "kt-v-hemodialise",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+      "originalInput": {
+        "pre": 80,
+        "pos": 28,
+        "horas": 4,
+        "uf": 2.5,
+        "peso": 75
+      },
+      "input": {
+        "pre": 80,
+        "pos": 28,
+        "horas": 4,
+        "uf": 2.5,
+        "peso": 75
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "ktv": 1.2382,
+          "urr": 65
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "1,24",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.238204,
+          "urr": 65
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pre": 80,
+            "pos": 28,
+            "horas": 4,
+            "uf": 2.5,
+            "peso": 75
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+          "startedAt": "2026-10-05T17:39:05.360Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "kt-v-hemodialise",
+              "main": [
+                "1,24",
+                ""
+              ],
+              "label": "spKt/V (Daugirdas 2ª geração)",
+              "raw": {
+                "ktv": 1.238204,
+                "urr": 65
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "9630d23a5a8a628ffac888eae95442b22b23ff46c590022ab9118c0a1c8113d1",
+          "bytes": 167,
+          "elapsedMs": 3.1557000000029802
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "startedAt": "2026-10-05T17:39:05.360Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "kt-v-hemodialise",
+            "main": [
+              "1,24",
+              ""
+            ],
+            "label": "spKt/V (Daugirdas 2ª geração)",
+            "raw": {
+              "ktv": 1.238204,
+              "urr": 65
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "9630d23a5a8a628ffac888eae95442b22b23ff46c590022ab9118c0a1c8113d1",
+        "bytes": 167,
+        "elapsedMs": 3.1557000000029802
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.ktv",
+            "expected": 1.2382,
+            "obtained": 1.238204,
+            "tolerance": 0.001,
+            "difference": 0.000004000000000115023,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.urr",
+            "expected": 65,
+            "obtained": 65,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.ktv",
+            "expected": 1.238204,
+            "obtained": 1.238204,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.urr",
+            "expected": 65,
+            "obtained": 65,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,24",
+            "obtained": "1,24",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "kt-v-hemodialise",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+      "originalInput": {
+        "pre": 100,
+        "pos": 40,
+        "horas": 3.5,
+        "uf": 2,
+        "peso": 60
+      },
+      "input": {
+        "pre": 100,
+        "pos": 40,
+        "horas": 3.5,
+        "uf": 2,
+        "peso": 60
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "ktv": 1.0755,
+          "urr": 60
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "1,08",
+          ""
+        ],
+        "label": "spKt/V (Daugirdas 2ª geração)",
+        "raw": {
+          "ktv": 1.075528,
+          "urr": 60
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pre": 100,
+            "pos": 40,
+            "horas": 3.5,
+            "uf": 2,
+            "peso": 60
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+          "startedAt": "2026-10-05T17:39:05.675Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "kt-v-hemodialise",
+              "main": [
+                "1,08",
+                ""
+              ],
+              "label": "spKt/V (Daugirdas 2ª geração)",
+              "raw": {
+                "ktv": 1.075528,
+                "urr": 60
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "21f82d98c0048452c7e657a4737f50126a579e54acbe7b6ca1daec47551a0cf6",
+          "bytes": 167,
+          "elapsedMs": 4.086999999999534
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "startedAt": "2026-10-05T17:39:05.675Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "kt-v-hemodialise",
+            "main": [
+              "1,08",
+              ""
+            ],
+            "label": "spKt/V (Daugirdas 2ª geração)",
+            "raw": {
+              "ktv": 1.075528,
+              "urr": 60
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "21f82d98c0048452c7e657a4737f50126a579e54acbe7b6ca1daec47551a0cf6",
+        "bytes": 167,
+        "elapsedMs": 4.086999999999534
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.ktv",
+            "expected": 1.0755,
+            "obtained": 1.075528,
+            "tolerance": 0.001,
+            "difference": 0.000028000000000139025,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.urr",
+            "expected": 60,
+            "obtained": 60,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.ktv",
+            "expected": 1.075528,
+            "obtained": 1.075528,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.urr",
+            "expected": 60,
+            "obtained": 60,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,08",
+            "obtained": "1,08",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "kt-v-hemodialise",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "Ureia pós maior que a pré: erro",
+      "originalInput": {
+        "pre": 50,
+        "pos": 60,
+        "horas": 4,
+        "uf": 2,
+        "peso": 70
+      },
+      "input": {
+        "pre": 50,
+        "pos": 60,
+        "horas": 4,
+        "uf": 2,
+        "peso": 70
+      },
+      "amendments": [],
+      "expected": {
+        "error": true
+      },
+      "recordedResult": {
+        "error": "A ureia pós-diálise precisa ser menor que a pré-diálise."
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pre": 50,
+            "pos": 60,
+            "horas": 4,
+            "uf": 2,
+            "peso": 70
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+          "startedAt": "2026-10-05T17:39:05.974Z",
+          "status": 422,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "error": "A ureia pós-diálise precisa ser menor que a pré-diálise.",
+            "code": "FORMULA_DOMAIN"
+          },
+          "responseSha256": "bdfe2a095107448a58017df6887414b6bdae2ff7eab99362ae1f0cdbae376019",
+          "bytes": 96,
+          "elapsedMs": 2.731999999989057
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/kt-v-hemodialise/calculate",
+        "startedAt": "2026-10-05T17:39:05.974Z",
+        "status": 422,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "error": "A ureia pós-diálise precisa ser menor que a pré-diálise.",
+          "code": "FORMULA_DOMAIN"
+        },
+        "responseSha256": "bdfe2a095107448a58017df6887414b6bdae2ff7eab99362ae1f0cdbae376019",
+        "bytes": 96,
+        "elapsedMs": 2.731999999989057
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "recorded-rejection",
+            "expected": "4xx with error and no result",
+            "obtained": {
+              "status": 422,
+              "error": "A ureia pós-diálise precisa ser menor que a pré-diálise.",
+              "result": false
+            },
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
