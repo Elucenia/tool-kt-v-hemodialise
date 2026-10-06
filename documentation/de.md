@@ -87,3 +87,39 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+spKt/V ≥ 1,4: erreicht das KDOQI-2015-Ziel
+
+| Ergebnisdetails | |
+| --- | --- |
+| Harnstoff-Reduktionsrate (URR) | 70,0 % |
+| Post/Prä-Verhältnis (R) | 0,300 |
+
+
+### 2
+
+spKt/V zwischen 1,2 und 1,4: über dem Mindestwert, unter dem Zielwert
+
+| Ergebnisdetails | |
+| --- | --- |
+| Harnstoff-Reduktionsrate (URR) | 65,0 % |
+| Post/Prä-Verhältnis (R) | 0,350 |
+
+
+### 3
+
+spKt/V < 1,2: unzureichende Dialyse
+
+| Ergebnisdetails | |
+| --- | --- |
+| Harnstoff-Reduktionsrate (URR) | 60,0 % |
+| Post/Prä-Verhältnis (R) | 0,400 |
+
+URR unter 65 %.
+

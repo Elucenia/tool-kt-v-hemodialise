@@ -1,6 +1,6 @@
 {
   "id": "kt-v-hemodialise",
-  "scope": "Exclusive report-owned R6-HTTP-linked candidate, read-only default test",
+  "scope": "Immutable package integrity; tests write no files",
   "files": [
     {
       "path": ".gitattributes",
@@ -24,8 +24,8 @@
     },
     {
       "path": "calculator.browser.js",
-      "bytes": 5378,
-      "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+      "bytes": 5583,
+      "sha256": "d9211ee20f24bb996fe7441535bc124363b4806f05f717f95181aaf38c13c172"
     },
     {
       "path": "calculator.js",
@@ -39,8 +39,8 @@
     },
     {
       "path": "CODE-COMPONENTS.md",
-      "bytes": 1097,
-      "sha256": "a438d2566c2eb17c59e24a3aa11936f95baf31cd5ee379fb84bc35ddab7c2c73"
+      "bytes": 1366,
+      "sha256": "85ded798f5f8a3fa7f47e1c9b947c344c2a499c27fa9d99438b8058b638f651c"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -49,68 +49,78 @@
     },
     {
       "path": "demo-runtime.js",
-      "bytes": 11656,
-      "sha256": "734da1ceff19b961423e1bb5d2c9eaafd18920b32cc4f331856f6065c9cfd2c9"
+      "bytes": 14286,
+      "sha256": "187cb0a3f2693707660f7fc69fc63ce5e30055a5ccdc621cc7945a0d3b1d2918"
     },
     {
       "path": "documentation/ar.md",
-      "bytes": 4046,
-      "sha256": "f8168e300befbe7162228eeae36e74d230e686c1e2599742b01cbce25cc7e152"
+      "bytes": 4938,
+      "sha256": "539f1bdd34513aa62efe1038e200ebef5257b8a1a52e785386e6f91c00c62b0f"
     },
     {
       "path": "documentation/de.md",
-      "bytes": 3403,
-      "sha256": "1fdb23e5a58e53f5924b03b82a952af755554bbaf5e504e0732e2a9e3f1c18d1"
+      "bytes": 4129,
+      "sha256": "f811d86537e19ef291a1d7d7d5ab3145a95c065c703370b38c64cee2b576649a"
     },
     {
       "path": "documentation/en.md",
-      "bytes": 3013,
-      "sha256": "b0181cb4e5972ead907598c1d34ed1326566c8c711256fa33dceec5b0971d5e2"
+      "bytes": 3663,
+      "sha256": "231f5dc73c2020b111a51469b75aedbebd59f6b4936262f3c94a015464c93e41"
     },
     {
       "path": "documentation/es.md",
-      "bytes": 3320,
-      "sha256": "0cb7b64868a0b78096aac75ebd56d04b78d2a66d6b4c0ed2f4c416070b252579"
+      "bytes": 4075,
+      "sha256": "03ace0ace84902fbe5fe2293259868736b55544b55ddd888633270ca469531eb"
     },
     {
       "path": "documentation/fr.md",
-      "bytes": 3485,
-      "sha256": "367f88c36d7a35a43f43f905ed63623ab8b097eb0ad65ec514a3432473f20c9b"
+      "bytes": 4256,
+      "sha256": "b5a5daa7b5aa0db196700c6d92a3da544fd967836978eb5ed7d7863ed6546720"
     },
     {
       "path": "documentation/hi.md",
-      "bytes": 5736,
-      "sha256": "1d7854a00fc3c495b23659362cf0e484734c635fad5ed46f3baa469b7c0a8036"
+      "bytes": 7069,
+      "sha256": "fd1eb3ec8c11641291be889e24db0f887b1d8ce4a8abb4c119da3938253de705"
     },
     {
       "path": "documentation/it.md",
-      "bytes": 3254,
-      "sha256": "881bb0d27eb7c489edc9797b793678f4ca806cd088d3308b9ced02bb21a659d2"
+      "bytes": 3976,
+      "sha256": "32373d88af8be23abba81adb58c55eb3688c085121c3fd1643b4efd3c1ef50b3"
     },
     {
       "path": "documentation/ja.md",
-      "bytes": 3372,
-      "sha256": "ed78d777b3c1ea41afcc217556a60143b82246f6b95d6b8bc209ac79ad5290ae"
+      "bytes": 4097,
+      "sha256": "16dc06f0fdebb21603064edab1fbc9bbc34b9b7233f68732369d84f75904b542"
     },
     {
       "path": "documentation/pt-BR.md",
-      "bytes": 3127,
-      "sha256": "2667f880f8030293cdf68db9a396be2de9543f27aeb92b2ad58965d77b3f22d2"
+      "bytes": 3835,
+      "sha256": "88945e75f8b0a9330026c9c381073b175dbb23cfe8a513cab279a40c1461a943"
     },
     {
       "path": "documentation/zh.md",
-      "bytes": 2700,
-      "sha256": "c03972af37b306e1ba81c8236cdb1aa851b4dd94dfecf7c92cbcb732f8229192"
+      "bytes": 3297,
+      "sha256": "b9c2ee92656b2daba70da2dcc58b38d04d6d1355d0e5dd45da88a9343a0df191"
+    },
+    {
+      "path": "documented-result-examples.json",
+      "bytes": 44358,
+      "sha256": "3a5dfa9108334a12a05b075f83fcd4f25a9539fe86a68f90d4659422e7e6cada"
     },
     {
       "path": "engine/tool-code/kt-v-hemodialise/calculator.js",
-      "bytes": 5378,
-      "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+      "bytes": 5583,
+      "sha256": "d9211ee20f24bb996fe7441535bc124363b4806f05f717f95181aaf38c13c172"
     },
     {
       "path": "evidence/publication-base-reference.json",
       "bytes": 2809,
       "sha256": "5548147f7b38bb7f95ce8475496d16dcff344d17de621cf5cfdd90700d7c5d3f"
+    },
+    {
+      "path": "evidence/publication-provenance-before-output-contract.json",
+      "bytes": 11906,
+      "sha256": "7a1765d9b5d56cd9acd84b222d24a6ab7dd4f344dc070dddfde800245cf23998"
     },
     {
       "path": "evidence/served-http-r6.json",
@@ -134,8 +144,8 @@
     },
     {
       "path": "localization.js",
-      "bytes": 43602,
-      "sha256": "723acaee01a1cd9e7e1101d238ae8a1896417cdc84a4ea634f86c6c0717f4707"
+      "bytes": 55974,
+      "sha256": "69b4e3d0891eb678d2ee1fc619e29d22e911461205764daac1a55e5c1c928536"
     },
     {
       "path": "METHOD-CODE-LICENSE.txt",
@@ -154,23 +164,23 @@
     },
     {
       "path": "package.json",
-      "bytes": 375,
-      "sha256": "dfdea048ff92fd4b27dd1aa39e92a52471b8fa6b5ab0adc730ec1f29745b568f"
+      "bytes": 469,
+      "sha256": "555607b50428bd6068b830c9e7f1c1ac474be60ae93db32ea127de111b02600e"
     },
     {
       "path": "portal-formatters.browser.js",
-      "bytes": 31300,
-      "sha256": "d8522ffe0b858012dfd25e5e8d10fe2eefec977f2bdb612be5cbadf5c4bed9f3"
+      "bytes": 38687,
+      "sha256": "cf0668f6fd44a80a3e4064915cf2da02d2203a9596bd39a9a0a6025fb12e17f4"
     },
     {
       "path": "publication-provenance.json",
-      "bytes": 11906,
-      "sha256": "7a1765d9b5d56cd9acd84b222d24a6ab7dd4f344dc070dddfde800245cf23998"
+      "bytes": 6365,
+      "sha256": "8bc0f396c0584d86f7c43833a0a38ed08f7043c9be091048abde1b932ddcea26"
     },
     {
       "path": "README.md",
-      "bytes": 3113,
-      "sha256": "f8fccbaf20a0376eb05d8f1a559348e9ef9ff81def60c22cb6a219e48caef30f"
+      "bytes": 3695,
+      "sha256": "713f7dcb3eaf4d74b675b5e6f10592556f569ba518aed918063f8107d05c5a6a"
     },
     {
       "path": "rejections.json",
@@ -188,9 +198,24 @@
       "sha256": "3c20d46e436116be0c673f0260b24bbc2193fafbd15fb4659bf0e545b452487e"
     },
     {
+      "path": "source-result-contract.json",
+      "bytes": 6198,
+      "sha256": "7c61337b4233f9ffb3d1be2410f9b67d27552534d9eaedc544c70a69db8475e9"
+    },
+    {
       "path": "SOURCE-RIGHTS-REVIEW.md",
       "bytes": 1698,
       "sha256": "70ce7551c6cd6f024848bfd32056dce2983052d7d8e86fa1cdc1973cd8603c9c"
+    },
+    {
+      "path": "test-presentation-contract.cjs",
+      "bytes": 1923,
+      "sha256": "a4a1734ea3d00c17ffeed7abbd605663459b7c190b695d2396cc58da93215cec"
+    },
+    {
+      "path": "test-source-result-contract.cjs",
+      "bytes": 1416,
+      "sha256": "cbadaf0576ecc2884c7523902880d2068e3a9b6b63df418359ab42219af2e386"
     },
     {
       "path": "test.cjs",
@@ -199,8 +224,8 @@
     },
     {
       "path": "tool.json",
-      "bytes": 33233,
-      "sha256": "5ae09ff71e9a3b79a426f589ff2314df238819b96a191deb6d7dc0152d80f47d"
+      "bytes": 34730,
+      "sha256": "191d0d874315fbdbd45079233f4181d5ade553c1ad771770d24b226bce3f14a7"
     }
   ]
 }

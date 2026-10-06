@@ -87,3 +87,39 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+spKt/V ≥ 1,4: meets the KDOQI 2015 target
+
+| Result details | |
+| --- | --- |
+| Urea reduction ratio (URR) | 70.0% |
+| Post/pre ratio (R) | 0.300 |
+
+
+### 2
+
+spKt/V between 1,2 and 1,4: above minimum, below target
+
+| Result details | |
+| --- | --- |
+| Urea reduction ratio (URR) | 65.0% |
+| Post/pre ratio (R) | 0.350 |
+
+
+### 3
+
+spKt/V < 1,2: inadequate dialysis
+
+| Result details | |
+| --- | --- |
+| Urea reduction ratio (URR) | 60.0% |
+| Post/pre ratio (R) | 0.400 |
+
+URR below 65%.
+

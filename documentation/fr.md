@@ -87,3 +87,39 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+spKt/V ≥ 1,4 : atteint la cible KDOQI 2015
+
+| Détails du résultat | |
+| --- | --- |
+| Taux de réduction de l'urée (URR) | 70,0 % |
+| Rapport post/pré (R) | 0,300 |
+
+
+### 2
+
+spKt/V entre 1,2 et 1,4 : au-dessus du minimum, en dessous de la cible
+
+| Détails du résultat | |
+| --- | --- |
+| Taux de réduction de l'urée (URR) | 65,0 % |
+| Rapport post/pré (R) | 0,350 |
+
+
+### 3
+
+spKt/V < 1,2 : dialyse inadéquate
+
+| Détails du résultat | |
+| --- | --- |
+| Taux de réduction de l'urée (URR) | 60,0 % |
+| Rapport post/pré (R) | 0,400 |
+
+URR inférieur à 65%.
+

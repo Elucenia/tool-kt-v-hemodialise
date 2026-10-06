@@ -337,7 +337,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Daugirdas 2ªgeração 1993:sp Kt/V variável; UF/peso pós; URR; sem Kt/Vequilibrado",
-    "implementationVersion": "kt-v-hemodialise@native-2026-10-03+3cd11ab6588d",
+    "implementationVersion": "kt-v-hemodialise@native-2026-10-05+d9211ee20f24",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/8305648/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -628,7 +628,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+      "implementationHash": "d9211ee20f24bb996fe7441535bc124363b4806f05f717f95181aaf38c13c172",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "kt-v-hemodialise@native-2026-10-03+3cd11ab6588d",
+          "previousImplementationHash": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf",
+          "implementationHash": "d9211ee20f24bb996fe7441535bc124363b4806f05f717f95181aaf38c13c172",
+          "scientificBodySha256": "59d5a3cedab744954739b32349b0a041439e9eefede689ebd4a48ccfaadf26ae",
+          "metadataContractHash": "bc4c00869319d6d85f380fa41b9a170f389a51f158fdc17fa18fa406074f0c6c",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Esta fórmula estima spKt/V de uma sessão, com compartimento único e correção de volume, e não equivale ao Kt/V equilibrado ou semanal. A técnica e o momento das amostras, unidades e regime de diálise precisam corresponder ao método. Metas KDOQI têm contexto e fonte próprios; a análise do valor isolado não confirma adequação global do tratamento.",
     "sourceLimitEvidence": {
@@ -647,20 +675,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/kt-v-hemodialise/calculator.js",
-    "bytes": 5378,
-    "sha256": "3cd11ab6588dc84a50397e2cea51471995a89cde039f665547c70dc7832c7caf"
+    "bytes": 5583,
+    "sha256": "d9211ee20f24bb996fe7441535bc124363b4806f05f717f95181aaf38c13c172"
   },
-  "sourceToolSha256": "6dba086815473205022618a9655beb26d94beede3195650423af77a2805eaa5f",
+  "sourceToolSha256": "3cd33b438364aae98bf43f736bb71c9daa09507d1fdb2bd7fae3a80ed61f1eac",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "24639074c85f4a8b3a405e8d594e12dd0323e629f2a13b4b47f4e8ba0c0a3c46",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "24639074c85f4a8b3a405e8d594e12dd0323e629f2a13b4b47f4e8ba0c0a3c46",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -1,0 +1,1409 @@
+{
+  "id": "kt-v-hemodialise",
+  "implementationVersion": "kt-v-hemodialise@native-2026-10-05+d9211ee20f24",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taxa de redução da ureia (URR)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "70,0%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Razão pós/pré (R)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "0,300",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: atinge a meta da KDOQI 2015",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taxa de redução da ureia (URR)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "65,0%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Razão pós/pré (R)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "0,350",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V entre 1,2 e 1,4: acima do mínimo, abaixo da meta",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taxa de redução da ureia (URR)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "60,0%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Razão pós/pré (R)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "0,400",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: diálise inadequada",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "URR abaixo de 65%.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Urea reduction ratio (URR)",
+                "locale": "en",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70.0%",
+                "locale": "en",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/pre ratio (R)",
+                "locale": "en",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.300",
+                "locale": "en",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: meets the KDOQI 2015 target",
+            "locale": "en",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Urea reduction ratio (URR)",
+                "locale": "en",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65.0%",
+                "locale": "en",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/pre ratio (R)",
+                "locale": "en",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.350",
+                "locale": "en",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V between 1,2 and 1,4: above minimum, below target",
+            "locale": "en",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Urea reduction ratio (URR)",
+                "locale": "en",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60.0%",
+                "locale": "en",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/pre ratio (R)",
+                "locale": "en",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.400",
+                "locale": "en",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: inadequate dialysis",
+            "locale": "en",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR below 65%.",
+            "locale": "en",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasa de reducción de la urea (URR)",
+                "locale": "es",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70,0%",
+                "locale": "es",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Relación pos/pre (R)",
+                "locale": "es",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,300",
+                "locale": "es",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: alcanza el objetivo de KDOQI 2015",
+            "locale": "es",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasa de reducción de la urea (URR)",
+                "locale": "es",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65,0%",
+                "locale": "es",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Relación pos/pre (R)",
+                "locale": "es",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,350",
+                "locale": "es",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V entre 1,2 y 1,4: por encima del mínimo, por debajo del objetivo",
+            "locale": "es",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasa de reducción de la urea (URR)",
+                "locale": "es",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60,0%",
+                "locale": "es",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Relación pos/pre (R)",
+                "locale": "es",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,400",
+                "locale": "es",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: diálisis inadecuada",
+            "locale": "es",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR por debajo de 65%.",
+            "locale": "es",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taux de réduction de l'urée (URR)",
+                "locale": "fr",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70,0 %",
+                "locale": "fr",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapport post/pré (R)",
+                "locale": "fr",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,300",
+                "locale": "fr",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4 : atteint la cible KDOQI 2015",
+            "locale": "fr",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taux de réduction de l'urée (URR)",
+                "locale": "fr",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65,0 %",
+                "locale": "fr",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapport post/pré (R)",
+                "locale": "fr",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,350",
+                "locale": "fr",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V entre 1,2 et 1,4 : au-dessus du minimum, en dessous de la cible",
+            "locale": "fr",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Taux de réduction de l'urée (URR)",
+                "locale": "fr",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60,0 %",
+                "locale": "fr",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapport post/pré (R)",
+                "locale": "fr",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,400",
+                "locale": "fr",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2 : dialyse inadéquate",
+            "locale": "fr",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR inférieur à 65%.",
+            "locale": "fr",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Harnstoff-Reduktionsrate (URR)",
+                "locale": "de",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70,0 %",
+                "locale": "de",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/Prä-Verhältnis (R)",
+                "locale": "de",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,300",
+                "locale": "de",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: erreicht das KDOQI-2015-Ziel",
+            "locale": "de",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Harnstoff-Reduktionsrate (URR)",
+                "locale": "de",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65,0 %",
+                "locale": "de",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/Prä-Verhältnis (R)",
+                "locale": "de",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,350",
+                "locale": "de",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V zwischen 1,2 und 1,4: über dem Mindestwert, unter dem Zielwert",
+            "locale": "de",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Harnstoff-Reduktionsrate (URR)",
+                "locale": "de",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60,0 %",
+                "locale": "de",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Post/Prä-Verhältnis (R)",
+                "locale": "de",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,400",
+                "locale": "de",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: unzureichende Dialyse",
+            "locale": "de",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR unter 65 %.",
+            "locale": "de",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasso di riduzione dell'urea (URR)",
+                "locale": "it",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70,0%",
+                "locale": "it",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapporto post/pre (R)",
+                "locale": "it",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,300",
+                "locale": "it",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: raggiunge il target KDOQI 2015",
+            "locale": "it",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasso di riduzione dell'urea (URR)",
+                "locale": "it",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65,0%",
+                "locale": "it",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapporto post/pre (R)",
+                "locale": "it",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,350",
+                "locale": "it",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V tra 1,2 e 1,4: sopra il minimo, sotto il target",
+            "locale": "it",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Tasso di riduzione dell'urea (URR)",
+                "locale": "it",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60,0%",
+                "locale": "it",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Rapporto post/pre (R)",
+                "locale": "it",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0,400",
+                "locale": "it",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: dialisi inadeguata",
+            "locale": "it",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR inferiore a 65%.",
+            "locale": "it",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "معدل انخفاض اليوريا (URR)",
+                "locale": "ar",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "٧٠٫٠%",
+                "locale": "ar",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "النسبة بعد/قبل (R)",
+                "locale": "ar",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "٠٫٣٠٠",
+                "locale": "ar",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: يحقق هدف KDOQI 2015",
+            "locale": "ar",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "معدل انخفاض اليوريا (URR)",
+                "locale": "ar",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "٦٥٫٠%",
+                "locale": "ar",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "النسبة بعد/قبل (R)",
+                "locale": "ar",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "٠٫٣٥٠",
+                "locale": "ar",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V بين 1,2 و1,4: فوق الحد الأدنى، دون الهدف",
+            "locale": "ar",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "معدل انخفاض اليوريا (URR)",
+                "locale": "ar",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "٦٠٫٠%",
+                "locale": "ar",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "النسبة بعد/قبل (R)",
+                "locale": "ar",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "٠٫٤٠٠",
+                "locale": "ar",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: غسيل كلوي غير كافٍ",
+            "locale": "ar",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR أقل من 65%.",
+            "locale": "ar",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素降低率（URR）",
+                "locale": "zh",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70.0%",
+                "locale": "zh",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "后/前比值 (R)",
+                "locale": "zh",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.300",
+                "locale": "zh",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4：达到 KDOQI 2015 目标",
+            "locale": "zh",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素降低率（URR）",
+                "locale": "zh",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65.0%",
+                "locale": "zh",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "后/前比值 (R)",
+                "locale": "zh",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.350",
+                "locale": "zh",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V 在 1,2 和 1,4 之间：高于最低值，低于目标值",
+            "locale": "zh",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素降低率（URR）",
+                "locale": "zh",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60.0%",
+                "locale": "zh",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "后/前比值 (R)",
+                "locale": "zh",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.400",
+                "locale": "zh",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2：透析不足",
+            "locale": "zh",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR 低于 65%。",
+            "locale": "zh",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素減少率（URR）",
+                "locale": "ja",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70.0%",
+                "locale": "ja",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "事前/事後比（R）",
+                "locale": "ja",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.300",
+                "locale": "ja",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4：KDOQI 2015の目標を達成",
+            "locale": "ja",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素減少率（URR）",
+                "locale": "ja",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65.0%",
+                "locale": "ja",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "事前/事後比（R）",
+                "locale": "ja",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.350",
+                "locale": "ja",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V が 1,2 から 1,4 の範囲：最低値を上回るが、目標値を下回る",
+            "locale": "ja",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "尿素減少率（URR）",
+                "locale": "ja",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60.0%",
+                "locale": "ja",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "事前/事後比（R）",
+                "locale": "ja",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.400",
+                "locale": "ja",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2：透析不十分",
+            "locale": "ja",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR が 65% 未満。",
+            "locale": "ja",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Ureia 70 → 21, 4 h, UF 3 L, 70 kg: Kt/V 1,44, URR 70%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "यूरिया न्यूनीकरण अनुपात (URR)",
+                "locale": "hi",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "70.0%",
+                "locale": "hi",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  70
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "पोस्ट/प्री अनुपात (R)",
+                "locale": "hi",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.300",
+                "locale": "hi",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.3
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V ≥ 1,4: KDOQI 2015 लक्ष्य को प्राप्त करता है",
+            "locale": "hi",
+            "template": "documented-authored-48d1e5f6c4a91998572d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 80 → 28, 4 h, UF 2,5 L, 75 kg: Kt/V 1,24, URR 65%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "यूरिया न्यूनीकरण अनुपात (URR)",
+                "locale": "hi",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "65.0%",
+                "locale": "hi",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  65
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "पोस्ट/प्री अनुपात (R)",
+                "locale": "hi",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.350",
+                "locale": "hi",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.35
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V 1,2 और 1,4 के बीच: न्यूनतम से ऊपर, लक्ष्य से नीचे",
+            "locale": "hi",
+            "template": "documented-authored-f72819d94441ea73b79c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 100 → 40, 3,5 h, UF 2 L, 60 kg: Kt/V 1,08, URR 60%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "यूरिया न्यूनीकरण अनुपात (URR)",
+                "locale": "hi",
+                "template": "documented-authored-83da651c786f6107de9f"
+              },
+              "value": {
+                "text": "60.0%",
+                "locale": "hi",
+                "template": "documented-authored-be8eea960568411e4ae8",
+                "sourceNumbers": [
+                  60
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "पोस्ट/प्री अनुपात (R)",
+                "locale": "hi",
+                "template": "documented-authored-01547eb20a3bb555a68a"
+              },
+              "value": {
+                "text": "0.400",
+                "locale": "hi",
+                "template": "documented-authored-4038f7923b0811101d3a",
+                "sourceNumbers": [
+                  0.4
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "spKt/V < 1,2: अपर्याप्त डायलिसिस",
+            "locale": "hi",
+            "template": "documented-authored-9c0ff70b930b026741e4"
+          },
+          "note": {
+            "text": "URR 65% से कम।",
+            "locale": "hi",
+            "template": "documented-authored-fcfba6b3b9bf8ca22635"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
